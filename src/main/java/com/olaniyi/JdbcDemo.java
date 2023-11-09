@@ -12,8 +12,9 @@ public class JdbcDemo {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         JdbcDapImpl dao = context.getBean("JdbcDapImpl", JdbcDapImpl.class);
-        Circle circle = dao.getCircle(3);
-        System.out.println(circle.getName());
-
+//        Circle circle = dao.getCircle(3);
+//        System.out.println(circle.getName());
+        dao.insertCircle(new Circle(7, "Bent trianlge"));
+        System.out.println(dao.getCircleCount());
     }
 }
