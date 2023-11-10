@@ -14,7 +14,9 @@ public class JdbcDemo {
         JdbcDapImpl dao = context.getBean("JdbcDapImpl", JdbcDapImpl.class);
 //        Circle circle = dao.getCircle(3);
 //        System.out.println(circle.getName());
-        dao.insertCircle(new Circle(7, "Bent trianlge"));
+        dao.insertCircle(new Circle(8, "Sloppy trianlge"));
         System.out.println(dao.getCircleCount());
+//        dao.createTriangle();
+
     }
 }
